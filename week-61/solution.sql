@@ -42,7 +42,7 @@ select * from FROSTY_FRIDAY_DB.WEEK_61_SCHEMA.TBL_TELECOM_PRODUCTS;
 
 -- JSONファイル生成
 create or replace stage FROSTY_FRIDAY_DB.WEEK_61_SCHEMA.INSTG_TELECOM_PRODUCTS
-  encryption = (type = 'SNOWFLAKE_SSE'); --これを入れないと署名付きURLからダウンロードした場合、ファイルが破損
+  encryption = (type = 'SNOWFLAKE_SSE'); --これを入れないと署名付きURLからダウンロードした場合、ファイルが複合できない
 create or replace file format FROSTY_FRIDAY_DB.WEEK_61_SCHEMA.FFMT_JSON_TELECOM_PRODUCTS
   type = 'JSON'
   compression = 'NONE'; --宣言しないと圧縮されてしまう
